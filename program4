@@ -1,0 +1,32 @@
+#include<stdio.h>
+#define MAX 100
+int getMaxelement(int[]);
+int size;
+int main()
+{
+    int arr[MAX],Max,i;
+    printf("\n\n Enter the size of the array:");
+    scanf("%d",&size);
+    printf("\n\n Enter %d elements \n\n",size);
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    Max=getMaxelement(arr);
+    printf("\n\n Largest element of the array is %d \n\n",Max);
+    return 0;
+}
+int getMaxelement(int a[])
+{
+    static int i=0,max=-9999;
+    if(i<size)
+    {
+        if(max<a[i])
+        {
+            max=a[i];
+            i++;
+            getMaxelement(a);
+        }
+    }
+    return max;
+}
