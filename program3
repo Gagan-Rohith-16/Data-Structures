@@ -1,14 +1,14 @@
 #include<stdio.h>
 void main()
 {
-    int number[30];
+    int numbers[30];
     int i,j,a,n;
     printf("Enter the value of n: \n");
     scanf("%d",&n);
     printf("Enter the numbers \n");
     for(i=0;i<n;++i)
     {
-        scanf("%d",&number[i]);
+        scanf("%d",&numbers[i]);
     }
     for(i=0;i<n;++i)
     {
@@ -22,6 +22,6 @@ void main()
             }
         }
     }
-    printf("The 2nd largest number is= %d \n",numbers[i]);
+    printf("The 2nd largest number is= %d \n",numbers[1]);
     printf("The 2nd smallest number is= %d \n",numbers[n-2]);
 }
